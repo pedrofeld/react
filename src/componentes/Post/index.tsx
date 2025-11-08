@@ -22,6 +22,7 @@ function Post({
     descricao = "Receita sem descrição",
     children
 }: PostProps) {
+    const temConteudoExtra = true;
     return (
         <article>
             <div className="nome-e-foto-da-receita">
@@ -50,6 +51,12 @@ function Post({
 
                 {children}
             </div>
+
+            {temConteudoExtra ? (
+                <button>Leia mais</button>
+            ): (
+                <p>Nenhum conteúdo disponível</p>
+            )}
         </article>
     )
 }
