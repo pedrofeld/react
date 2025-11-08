@@ -144,3 +144,8 @@ Em resumo, React é utilizado para criar interfaces, enquanto Vite facilita o pr
 
 ### Resumo:
 A exportação default serve para quando um arquivo possui apenas uma função e é uma boa prática separar os componentes por arquivos.
+
+## Props
+
+### O que são:
+Props (abreviação de "properties") são um mecanismo no React que permite passar dados de um componente pai para um componente filho. Eles são uma forma de comunicação entre componentes e ajudam a tornar os componentes reutilizáveis e flexíveis.
