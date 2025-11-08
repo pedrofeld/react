@@ -1,4 +1,4 @@
-export function Post() {
+function Post() {
     return (
         <article>
             <div className="nome-e-foto-da-receita">
@@ -48,3 +48,4 @@ export function Post() {
     )
 }
 
+export default Post;

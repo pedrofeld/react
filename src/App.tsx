@@ -1,6 +1,6 @@
-import { Header } from './componentes/Header'
-import { Footer } from './componentes/Footer'
-import { Post } from './componentes/Post'
+import Header from './componentes/Header'
+import Footer from './componentes/Footer'
+import Post from './componentes/Post'
 
 export function App() {
   const hello = "Hello, React!"

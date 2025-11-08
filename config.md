@@ -82,3 +82,65 @@ Em resumo, React é utilizado para criar interfaces, enquanto Vite facilita o pr
 ### Resumo
 - ***JSX**: Usado com JavaScript, sem verificação de tipos.
 - ***TSX**: Usado com TypeScript, com suporte a tipos estáticos.
+
+## Exportação individual vs Exportação default
+
+### Exportação individual:
+- Permite múltiplas exportações de um mesmo arquivo.
+- Importa-se usando chaves.
+- Exemplo:
+
+    Exportação:
+
+    ```TSX
+    // arquivo index.tsx
+    export function myFunction1() {
+    // código
+    }
+
+    export function myFunction2() {
+    // código
+    }
+    ```
+
+    Importação:
+
+    ```TSX
+    // arquivo main.tsx
+    import { myFunction1, myFunction2 } from './myFunctions';
+    ```
+
+### Exportação default:
+- Permite uma única exportação principal do arquivo.
+- Importa-se sem chaves e pode ser nomeada livremente.
+- Exemplos:
+
+1. export na função
+
+    ```TSX
+    // arquivo index.tsx
+    export default function myFunction() {
+    // código
+    }
+    ```
+
+2. export no final do arquivo
+
+    ```TSX
+    // arquivo index.tsx
+    function myFunction() {
+    // código
+    }
+
+    export default myFunction;
+    ```
+
+    Importação:
+
+    ```TSX
+    // arquivo main.tsx
+    import myFunc from './myFunction';
+    ```
+
+### Resumo:
+A exportação default serve para quando um arquivo possui apenas uma função e é uma boa prática separar os componentes por arquivos.
