@@ -1,10 +1,10 @@
+import { Header } from './componentes/Header'
+
 export function App() {
   const hello = "Hello, React!"
   return (
     <> 
-      <header>
-        <h1>Meu blog</h1>
-      </header>
+      <Header/>
 
       <main>
         <h3>{hello}</h3>
