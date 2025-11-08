@@ -1,5 +1,6 @@
 import { Header } from './componentes/Header'
 import { Footer } from './componentes/Footer'
+import { Post } from './componentes/Post'
 
 export function App() {
   const hello = "Hello, React!"
@@ -11,20 +12,10 @@ export function App() {
         <h3>{hello}</h3>
         <p>Estamos aprendendo React criando um blog de receitas.</p>
 
-        <article>
-          <h3>Receitas</h3>
-          <img src="https://picsum.photos/200/200" alt="Imagem aleatória"/>
-          <p>Bloco de chocolate</p>
-
-          <div>
-            <img src="https://github.com/pedrofeld.png" alt="Foto de perfil do autor"/>
-            <div>
-              <span>Pedro Feld</span>
-              <span>08/11/2025</span>
-            </div>
-            <p>Delicioso bolo de chocolate</p>
-          </div>
-        </article>
+        <h2>Receitas:</h2>
+        <Post/>
+        <Post/>
+        <Post/>
       </main>
 
       <Footer/>
