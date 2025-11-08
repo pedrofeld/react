@@ -1,4 +1,5 @@
 import { Header } from './componentes/Header'
+import { Footer } from './componentes/Footer'
 
 export function App() {
   const hello = "Hello, React!"
@@ -26,9 +27,7 @@ export function App() {
         </article>
       </main>
 
-      <footer>
-        <p>₢ 2025 Meu blog</p>
-      </footer>
+      <Footer/>
     </>
   )
 }
