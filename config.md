@@ -59,3 +59,26 @@ Em resumo, React é utilizado para criar interfaces, enquanto Vite facilita o pr
     ```bash
     npm run dev
     ```
+
+## Diferença entre TSX e JSX
+
+### JSX
+- **Uso**: Sintaxe de extensão do JavaScript para React.
+- **Tipo**: Arquivo JavaScript.
+- **Exemplo**: 
+
+  ```jsx
+  const element = <h1>Hello, world!</h1>;
+  ```
+
+### TSX
+- **Uso**: Versão do JSX para TypeScript, com suporte a tipos estáticos.
+- **Tipo**: Arquivo TypeScript que inclui JSX.
+- **Exemplo**:
+
+    ```tsx
+    const element: JSX.Element = <h1>Hello, world!</h1>;
+    ```
+### Resumo
+- ***JSX**: Usado com JavaScript, sem verificação de tipos.
+- ***TSX**: Usado com TypeScript, com suporte a tipos estáticos.
