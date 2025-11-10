@@ -151,3 +151,22 @@ A exportação default serve para quando um arquivo possui apenas uma função e
 
 ### O que são:
 Props (abreviação de "properties") são um mecanismo no React que permite passar dados de um componente pai para um componente filho. Eles são uma forma de comunicação entre componentes e ajudam a tornar os componentes reutilizáveis e flexíveis.
+
+## SPA (Single Page Application)
+
+SPA, ou **Single Page Application**, é um tipo de aplicação web que carrega uma única página HTML e atualiza dinamicamente o conteúdo conforme o usuário interage, sem precisar recarregar a página inteira. 
+
+### Principais Características:
+- **Experiência de Usuário Fluida**: Navegação rápida, pois apenas partes da página são atualizadas.
+- **Uso de JavaScript**: Utiliza frameworks como React, Angular ou Vue.js.
+- **Requisições Assíncronas**: Dados carregados em segundo plano via AJAX ou Fetch.
+- **Melhor Performance**: Reduz o tempo de carregamento, carregando a estrutura básica uma única vez.
+
+### Vantagens:
+- Melhor desempenho e experiência do usuário.
+- Menos consumo de largura de banda.
+
+### Desvantagens:
+- Desafios de SEO, pois motores de busca podem ter dificuldades para indexar conteúdo dinâmico.
+- Implementação mais complexa em comparação com aplicações tradicionais.
+
