@@ -24,8 +24,8 @@ function Post({
 }: PostProps) {
     const temConteudoExtra = true;
 
-    function curtir() {
-        alert("Você curtiu essa receita!");
+    function curtir(titulo: string) {
+        alert(`Você curtiu a receita: ${titulo}!`);
     }
 
     // Em projetos em inglês, é comum usar "handle" para funções que lidam com eventos. No caso acima, seria "handleLike"
@@ -65,7 +65,7 @@ function Post({
                 <p>Nenhum conteúdo disponível</p>
             )}
 
-            <button onClick={curtir}>
+            <button onClick={() => curtir(titulo)}>
                 Curtir
             </button>
         </article>
