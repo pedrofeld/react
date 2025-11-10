@@ -62,6 +62,8 @@ Em resumo, React é utilizado para criar interfaces, enquanto Vite facilita o pr
 
 ## Diferença entre TSX e JSX
 
+São extensões do Typescript e do Javascript, respectivamente, que permitem conteúdo HTML dentro.
+
 ### JSX
 - **Uso**: Sintaxe de extensão do JavaScript para React.
 - **Tipo**: Arquivo JavaScript.
