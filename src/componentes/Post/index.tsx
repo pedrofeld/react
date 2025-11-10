@@ -23,6 +23,13 @@ function Post({
     children
 }: PostProps) {
     const temConteudoExtra = true;
+
+    function curtir() {
+        alert("Você curtiu essa receita!");
+    }
+
+    // Em projetos em inglês, é comum usar "handle" para funções que lidam com eventos. No caso acima, seria "handleLike"
+
     return (
         <article>
             <div className="nome-e-foto-da-receita">
@@ -57,6 +64,10 @@ function Post({
             ): (
                 <p>Nenhum conteúdo disponível</p>
             )}
+
+            <button onClick={curtir}>
+                Curtir
+            </button>
         </article>
     )
 }
