@@ -25,9 +25,11 @@ function Post({
     children
 }: PostProps) {
     const temConteudoExtra = true;
+    let like = 0;
 
     function curtir(titulo: string) {
-        alert(`Você curtiu a receita: ${titulo}!`);
+        like ++;
+        alert(`Você curtiu a receita: ${titulo}! Total de likes: ${like}.`);
     }
 
     // Em projetos em inglês, é comum usar "handle" para funções que lidam com eventos. No caso acima, seria "handleLike"
