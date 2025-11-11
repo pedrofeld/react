@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 interface PostProps {
     id: number;
@@ -13,6 +14,7 @@ interface PostProps {
 }
 
 function Post({
+    id,
     titulo = "Post sem título", 
     imagem = "https://picsum.photos/200/300", 
     ingredientes = ["Receita sem ingredientes"],
@@ -33,7 +35,11 @@ function Post({
     return (
         <article>
             <div className="nome-e-foto-da-receita">
-                <h3>{titulo}</h3>
+                <h3>
+                    <Link to={`/post/${id}`}>
+                    {titulo}
+                    </Link>
+                </h3>
                 <img src={imagem} alt="Imagem aleatória"/>
             </div>
             
