@@ -1,3 +1,5 @@
+import { Wrapper, Container} from './styles'
+
 function Header() {
   const usuarioLogado = true
   let message
@@ -9,10 +11,12 @@ function Header() {
   }
 
   return (
-    <header>
-      <h1>Meu blog</h1>
-      {message}
-    </header>
+    <Wrapper>
+      <Container>
+        <h1>Meu blog</h1>
+        {message}
+      </Container>
+    </Wrapper>
   )
 }
 
