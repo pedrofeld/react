@@ -182,3 +182,66 @@ SPA, ou **Single Page Application**, é um tipo de aplicação web que carrega u
 
 - Desafios de SEO, pois motores de busca podem ter dificuldades para indexar conteúdo dinâmico.
 - Implementação mais complexa em comparação com aplicações tradicionais.
+
+## ESLint e Prettier
+
+Servem para a padronização de código.
+
+### O Papel do ESLint
+- Ferramenta de análise estática para JavaScript e TypeScript.
+- Identifica e corrige problemas como variáveis não utilizadas, más práticas e inconsistências.
+- Benefícios:
+  - Detecção de erros comuns.
+  - Adoção de boas práticas (ex.: evitar `var`).
+  - Manutenção de um estilo de código consistente.
+
+### O Papel do Prettier
+- Foca na formatação automática do código.
+- Padroniza espaçamento, indentação, uso de aspas e quebras de linha.
+- Benefícios:
+  - Elimina discussões sobre estilo.
+  - Melhora a legibilidade do código.
+  - Aumenta a produtividade ao automatizar a formatação.
+
+### Integração no Projeto
+
+1. Instalação das dependências: ESLint, Prettier e plugins.
+
+   ```bash
+   npm i --save-dev eslint prettier eslint-config-prettier eslint-plugin-prettier
+   ```
+
+2. Configuração do ESLint via `.eslintrc.json`.
+
+   ```bash
+   {
+      "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+      "rules": {
+         "prettier/prettier": "error",
+         "no-unused-vars": "warn",
+         "semi": ["error", "always"]
+      }
+   }
+   ```
+
+3. Configuração do Prettier via `.prettierrc`.
+
+   ```bash
+   {
+      "singleQuote": true,
+      "trailingComma": "es5",
+      "tabWidth": 2,
+      "semi": true
+   }
+   ```
+
+4. Automação no VS Code com formatação ao salvar e correção automática de erros.
+
+   ```bash
+   {
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+      "source.fxAll.eslint": true
+      }
+   }
+   ```
