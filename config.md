@@ -20,11 +20,12 @@ Em resumo, React é utilizado para criar interfaces, enquanto Vite facilita o pr
 ## Passo a Passo para Criar um Projeto React com Vite
 
 ### No CMD:
+
 1. **Entrar na pasta desejada para armazenar o projeto React.**
-   
-     ```bash
-     cd caminho\para\a\pasta
-    ```
+
+   ```bash
+   cd caminho\para\a\pasta
+   ```
 
 2. **Rodar o comando**:
 
@@ -35,138 +36,149 @@ Em resumo, React é utilizado para criar interfaces, enquanto Vite facilita o pr
 3. **Dar um nome ao projeto.**
 
 4. **Selecionar recursos:**
+
 - Escolher o template React e depois TypeScript.
 
 3. **Entrar no projeto pelo VSCODE:**
-    
-    ```bash
-     code .
-    ```
+
+   ```bash
+    code .
+   ```
 
 4. **Ajustar arquivo vite.config.ts:**
 
-    ```bash
-    export default defineConfig({
-        plugins: [react()],
-        server: {
-            open: true,
-        },
-    })
-    ```
+   ```bash
+   export default defineConfig({
+       plugins: [react()],
+       server: {
+           open: true,
+       },
+   })
+   ```
 
 5. **No terminal bash do VSCODE:**
 
-    ```bash
-    npm run dev
-    ```
+   ```bash
+   npm run dev
+   ```
 
 ## Diferença entre TSX e JSX
 
 São extensões do Typescript e do Javascript, respectivamente, que permitem conteúdo HTML dentro.
 
 ### JSX
+
 - **Uso**: Sintaxe de extensão do JavaScript para React.
 - **Tipo**: Arquivo JavaScript.
-- **Exemplo**: 
+- **Exemplo**:
 
   ```jsx
-  const element = <h1>Hello, world!</h1>;
+  const element = <h1>Hello, world!</h1>
   ```
 
 ### TSX
+
 - **Uso**: Versão do JSX para TypeScript, com suporte a tipos estáticos.
 - **Tipo**: Arquivo TypeScript que inclui JSX.
 - **Exemplo**:
 
-    ```tsx
-    const element: JSX.Element = <h1>Hello, world!</h1>;
-    ```
+  ```tsx
+  const element: JSX.Element = <h1>Hello, world!</h1>
+  ```
+
 ### Resumo
-- ***JSX**: Usado com JavaScript, sem verificação de tipos.
-- ***TSX**: Usado com TypeScript, com suporte a tipos estáticos.
+
+- **\*JSX**: Usado com JavaScript, sem verificação de tipos.
+- **\*TSX**: Usado com TypeScript, com suporte a tipos estáticos.
 
 ## Exportação individual vs Exportação default
 
 ### Exportação individual:
+
 - Permite múltiplas exportações de um mesmo arquivo.
 - Importa-se usando chaves.
 - Exemplo:
 
-    Exportação:
+  Exportação:
 
-    ```TSX
-    // arquivo index.tsx
-    export function myFunction1() {
-    // código
-    }
+  ```TSX
+  // arquivo index.tsx
+  export function myFunction1() {
+  // código
+  }
 
-    export function myFunction2() {
-    // código
-    }
-    ```
+  export function myFunction2() {
+  // código
+  }
+  ```
 
-    Importação:
+  Importação:
 
-    ```TSX
-    // arquivo main.tsx
-    import { myFunction1, myFunction2 } from './myFunctions';
-    ```
+  ```TSX
+  // arquivo main.tsx
+  import { myFunction1, myFunction2 } from './myFunctions';
+  ```
 
 ### Exportação default:
+
 - Permite uma única exportação principal do arquivo.
 - Importa-se sem chaves e pode ser nomeada livremente.
 - Exemplos:
 
 1. export na função
 
-    ```TSX
-    // arquivo index.tsx
-    export default function myFunction() {
-    // código
-    }
-    ```
+   ```TSX
+   // arquivo index.tsx
+   export default function myFunction() {
+   // código
+   }
+   ```
 
 2. export no final do arquivo
 
-    ```TSX
-    // arquivo index.tsx
-    function myFunction() {
-    // código
-    }
+   ```TSX
+   // arquivo index.tsx
+   function myFunction() {
+   // código
+   }
 
-    export default myFunction;
-    ```
+   export default myFunction;
+   ```
 
-    Importação:
+   Importação:
 
-    ```TSX
-    // arquivo main.tsx
-    import myFunc from './myFunction';
-    ```
+   ```TSX
+   // arquivo main.tsx
+   import myFunc from './myFunction';
+   ```
 
 ### Resumo:
+
 A exportação default serve para quando um arquivo possui apenas uma função e é uma boa prática separar os componentes por arquivos.
 
 ## Props
 
 ### O que são:
+
 Props (abreviação de "properties") são um mecanismo no React que permite passar dados de um componente pai para um componente filho. Eles são uma forma de comunicação entre componentes e ajudam a tornar os componentes reutilizáveis e flexíveis.
 
 ## SPA (Single Page Application)
 
-SPA, ou **Single Page Application**, é um tipo de aplicação web que carrega uma única página HTML e atualiza dinamicamente o conteúdo conforme o usuário interage, sem precisar recarregar a página inteira. 
+SPA, ou **Single Page Application**, é um tipo de aplicação web que carrega uma única página HTML e atualiza dinamicamente o conteúdo conforme o usuário interage, sem precisar recarregar a página inteira.
 
 ### Principais Características:
+
 - **Experiência de Usuário Fluida**: Navegação rápida, pois apenas partes da página são atualizadas.
 - **Uso de JavaScript**: Utiliza frameworks como React, Angular ou Vue.js.
 - **Requisições Assíncronas**: Dados carregados em segundo plano via AJAX ou Fetch.
 - **Melhor Performance**: Reduz o tempo de carregamento, carregando a estrutura básica uma única vez.
 
 ### Vantagens:
+
 - Melhor desempenho e experiência do usuário.
 - Menos consumo de largura de banda.
 
 ### Desvantagens:
+
 - Desafios de SEO, pois motores de busca podem ter dificuldades para indexar conteúdo dinâmico.
 - Implementação mais complexa em comparação com aplicações tradicionais.
-
