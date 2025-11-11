@@ -1,17 +1,6 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
-
-interface PostProps {
-    id: number;
-    titulo: string;
-    imagem: string;
-    ingredientes: string[];
-    instrucoes: string[];
-    autor: string;
-    criadoEm: string;
-    descricao: string;
-    children?: React.ReactNode;
-}
+import { IPost } from "../../types";
 
 function Post({
     id,
@@ -23,7 +12,7 @@ function Post({
     criadoEm = Date.now().toString(), 
     descricao = "Receita sem descrição",
     children
-}: PostProps) {
+}: IPost) {
     const temConteudoExtra = true;
     let like = 0;
 

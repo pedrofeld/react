@@ -2,6 +2,7 @@ import Header from '../../componentes/Header'
 import Footer from '../../componentes/Footer'
 import Post from '../../componentes/Post'
 import { posts } from '../../posts'
+import PostsList from '../../componentes/PostsList'
 
 export function Home() {
     const hello = "Hello, React!"
@@ -42,19 +43,7 @@ export function Home() {
 
                 <h2>Receitas:</h2>
                 
-                {posts.map((post) => (
-                    <Post
-                    key={post.id}
-                        id={post.id}
-                        titulo={post.titulo}
-                        imagem={post.imagem}
-                        ingredientes={post.ingredientes}
-                        instrucoes={post.instrucoes}
-                        autor={post.autor}
-                        criadoEm={post.criadoEm}
-                        descricao={post.descricao}
-                    />
-                ))}
+                <PostsList posts={posts}/>
             </main>
 
             <Footer/>
