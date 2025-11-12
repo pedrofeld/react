@@ -1,4 +1,4 @@
-import { Wrapper, Container, Logo } from './styles'
+import { Wrapper, Container, Title, Logo } from './styles'
 
 import logo from '../../assets/logo.png'
 
@@ -16,7 +16,7 @@ function Header() {
     <Wrapper>
       <Container>
         <div>
-          <h1>Meu blog</h1>
+          <Title as="h2">Meu blog</Title>
           {message}
         </div>
         <Logo src={logo}/>

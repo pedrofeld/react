@@ -16,6 +16,11 @@ export const Container = styled.div`
     align-items: center;
 `;
 
+export const Title = styled.h1`
+    font-size: 3rem;
+    margin-bottom: 2rem;
+`;
+
 export const Logo = styled.img`
     width: 100px;
 `;
