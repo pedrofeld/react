@@ -1,4 +1,6 @@
-import { Wrapper, Container} from './styles'
+import { Wrapper, Container, Logo } from './styles'
+
+import logo from '../../assets/logo.png'
 
 function Header() {
   const usuarioLogado = true
@@ -13,8 +15,11 @@ function Header() {
   return (
     <Wrapper>
       <Container>
-        <h1>Meu blog</h1>
-        {message}
+        <div>
+          <h1>Meu blog</h1>
+          {message}
+        </div>
+        <Logo src={logo}/>
       </Container>
     </Wrapper>
   )

@@ -10,4 +10,12 @@ export const Wrapper = styled.header`
 export const Container = styled.div`
     width: 1250px;
     padding: 0 25px;
-`
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`;
+
+export const Logo = styled.img`
+    width: 100px;
+`;
