@@ -1,13 +1,15 @@
 import { RouterProvider } from 'react-router-dom'
 import { router } from './routes'
 import GlobalStyles from './styles/global.ts'
+import { ThemeProvider } from 'styled-components'
+import themes from './themes'
 
 export function App() {
   return (
-    <>
+    <ThemeProvider theme={themes.dark}>
       <GlobalStyles />
       <RouterProvider router={router} />
-    </>
+    </ThemeProvider>
   )
 }
 

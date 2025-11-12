@@ -34,23 +34,23 @@ export const Button = styled.button<ButtonProps>`
             color: ${primary ? 'white' : '#3295b4'};
         `}
     */
-    background: white;
-    color: #3295b4;
+    background: ${(props) => props.theme.colors.backgroundColor};
+    color: ${(props) => props.theme.colors.primary};
     ${(props) => 
         props.primary && css`
-            background: #3295b4;
+            background: ${(props) => props.theme.colors.primary};
             color: white;
         `
     }
     font-size: 1em;
     margin: 1em 0.5rem 1 rem 0;
     padding: 0.25em 1em;
-    border: 2px solid #3295b4;
+    border: 2px solid ${(props) => props.theme.colors.primary};
     cursor: pointer;
 
     &:hover {
-        background: white;
-        color: #3295b4;
+        background: ${(props) => props.theme.colors.secondary};
+        color: ${(props) => props.theme.colors.primary};
 
         animation: ${pulse} 0.6s ease-in-out;
     }
@@ -69,11 +69,11 @@ export const RoundedButton = styled(Button)`
 `;
 
 export const StyledLink = styled(Link)`
-    color: #000;
+    color: ${(props) => props.theme.colors.title};
 `;
 
 export const Article = styled.article`
-    border: 1px solid #d7d7d7;
+    border: 1px solid ${(props) => props.theme.colors.border};
     padding: 20px;
 
     /*

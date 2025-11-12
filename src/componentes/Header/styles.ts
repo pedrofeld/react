@@ -10,9 +10,9 @@ const bounce = keyframes`
 `;
 
 export const Wrapper = styled.header`
-    background-color: #f7f8fe;
+    background-color: ${(props) => props.theme.colors.secondary};
     padding: 30px 0;
-    display: felx;
+    display: flex;
     justify-content: center;
 `;
 
@@ -28,6 +28,7 @@ export const Container = styled.div`
 export const Title = styled.h1`
     font-size: 3rem;
     margin-bottom: 2rem;
+    color: ${(props) => props.theme.colors.title};
 `;
 
 export const Logo = styled.img`

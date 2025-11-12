@@ -15,14 +15,14 @@ export const Title = styled.div`
     margin-bottom: 45px;
 
     h1 {
-        color: #000000;
+        color: ${(props) => props.theme.colors.title};
         font-size: 36px;
         line-height: 45px;
         letter-spacing: -1px;
     }
 
     span {
-        color: #94979e;
+        color: ${(props) => props.theme.colors.textColor};
         font-size: 16px;
         line-height: 24px;
     }
