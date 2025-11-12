@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { IPost } from '../../types'
-import { Avatar, Button } from './styles'
+import { Avatar, Button, RoundedButton } from './styles'
 
 function Post({
   id,
@@ -59,7 +59,7 @@ function Post({
       </div>
 
       {temConteudoExtra ? (
-        <button>Leia mais</button>
+         <RoundedButton as="a" href={`/post/${id}`}>Leia mais</RoundedButton>
       ) : (
         <p>Nenhum conteúdo disponível</p>
       )}
@@ -72,7 +72,7 @@ function Post({
 export default Post
 
 /*
-    Considerações:
-    - children: permite passar conteúdo adicional entre as tags de abertura e fechamento do componente Post
-    - nas entradas da função dá para definir valores padrão para as props, caso não sejam fornecidas
+  Considerações:
+  - children: permite passar conteúdo adicional entre as tags de abertura e fechamento do componente Post
+  - nas entradas da função dá para definir valores padrão para as props, caso não sejam fornecidas
 */
