@@ -35,6 +35,17 @@ export const Button = styled.button<ButtonProps>`
     padding: 0.25em 1em;
     border: 2px solid #3295b4;
     cursor: pointer;
+
+    &:hover {
+        background: white;
+        color: #3295b4;
+    }
+
+    &::before {
+        content: '🐱‍🏍';
+        display: inline-block;
+        margin-right: 0.5rem;
+    }
 `;
 
 export const RoundedButton = styled(Button)`
