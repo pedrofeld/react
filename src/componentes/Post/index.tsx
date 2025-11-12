@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { IPost } from '../../types'
-import { Avatar } from './styles'
+import { Avatar, Button } from './styles'
 
 function Post({
   id,
@@ -64,7 +64,7 @@ function Post({
         <p>Nenhum conteúdo disponível</p>
       )}
 
-      <button onClick={() => curtir(titulo)}>Curtir</button>
+      <Button primary onClick={() => curtir(titulo)}>Curtir</Button>
     </article>
   )
 }
