@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { IPost } from '../../types'
-import { Avatar, Button, RoundedButton, StyledLink } from './styles'
+import { Article, Avatar, Button, RoundedButton, StyledLink } from './styles'
 
 function Post({
   id,
@@ -25,7 +25,7 @@ function Post({
   // Em projetos em inglês, é comum usar "handle" para funções que lidam com eventos. No caso acima, seria "handleLike"
 
   return (
-    <article>
+    <Article>
       <div className="nome-e-foto-da-receita">
         <h3>
           <StyledLink to={`/post/${id}`}>{titulo}</StyledLink>
@@ -65,7 +65,7 @@ function Post({
       )}
 
       <Button primary onClick={() => curtir(titulo)}>Curtir</Button>
-    </article>
+    </Article>
   )
 }
 

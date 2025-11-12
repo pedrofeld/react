@@ -57,3 +57,15 @@ export const RoundedButton = styled(Button)`
 export const StyledLink = styled(Link)`
     color: #000;
 `;
+
+export const Article = styled.article`
+    border: 1px solid #d7d7d7;
+    padding: 20px;
+
+    /*
+        .category {
+        
+        }
+        nesting: seletores/regras de estilo dentro de outros seletores através de classes
+    */
+`;
