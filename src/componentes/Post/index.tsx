@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { IPost } from '../../types'
+import { Avatar } from './styles'
 
 function Post({
   id,
@@ -44,7 +45,7 @@ function Post({
 
       <div className="autor-info">
         <h3>Autor:</h3>
-        <img
+        <Avatar
           src="https://github.com/pedrofeld.png"
           alt="Foto de perfil do autor"
         />
