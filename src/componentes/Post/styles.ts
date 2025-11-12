@@ -1,15 +1,27 @@
 import { Link } from 'react-router-dom';
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 interface ButtonProps {
     primary?: boolean;
-}
+};
+
+const pulse = keyframes`
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+`;
 
 export const Avatar = styled.img`
     width: 38px;
     height: 38px;
     border-radius: 50%;
-`
+`;
 
 export const Button = styled.button<ButtonProps>`
     /*
@@ -39,6 +51,8 @@ export const Button = styled.button<ButtonProps>`
     &:hover {
         background: white;
         color: #3295b4;
+
+        animation: ${pulse} 0.6s ease-in-out;
     }
 
     &::before {
