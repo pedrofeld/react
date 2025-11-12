@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { IPost } from '../../types'
-import { Avatar, Button, RoundedButton } from './styles'
+import { Avatar, Button, RoundedButton, StyledLink } from './styles'
 
 function Post({
   id,
@@ -28,7 +28,7 @@ function Post({
     <article>
       <div className="nome-e-foto-da-receita">
         <h3>
-          <Link to={`/post/${id}`}>{titulo}</Link>
+          <StyledLink to={`/post/${id}`}>{titulo}</StyledLink>
         </h3>
         <img src={imagem} alt="Imagem aleatória" />
       </div>
