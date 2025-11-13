@@ -6,7 +6,7 @@ import themes from './themes'
 
 export function App() {
   return (
-    <ThemeProvider theme={themes.dark}>
+    <ThemeProvider theme={themes.light}>
       <GlobalStyles />
       <RouterProvider router={router} />
     </ThemeProvider>

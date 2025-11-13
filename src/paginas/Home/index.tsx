@@ -3,6 +3,7 @@ import Footer from '../../componentes/Footer'
 import Post from '../../componentes/Post'
 import { posts } from '../../posts'
 import PostsList from '../../componentes/PostsList'
+import { Search, Container } from './styles'
 
 export function Home() {
   const hello = 'Hello, React!'
@@ -28,14 +29,16 @@ export function Home() {
     <>
       <Header />
 
-      <form onSubmit={enviarFormulario}>
-        <input
-          type="text"
-          placeholder="Filtrar posts por título"
-          onChange={filtrarTexto}
-        />
-        <button>Filtrar</button>
-      </form>
+      <Search onSubmit={enviarFormulario}>
+        <Container>
+          <input
+            type="text"
+            placeholder="Filtrar posts por título"
+            onChange={filtrarTexto}
+          />
+          <button>Filtrar</button>
+        </Container>
+      </Search>
 
       <main>
         <h3>{hello}</h3>
