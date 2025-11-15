@@ -3,13 +3,14 @@ import { router } from './routes'
 import GlobalStyles from './styles/global.ts'
 import { ThemeProvider } from 'styled-components'
 import themes from './themes'
+import { ThemeProviderComponent } from './contexts/ThemeContext.tsx'
 
 export function App() {
   return (
-    <ThemeProvider theme={themes.light}>
+    <ThemeProviderComponent>
       <GlobalStyles />
       <RouterProvider router={router} />
-    </ThemeProvider>
+    </ThemeProviderComponent>
   )
 }
 

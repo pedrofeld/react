@@ -1,10 +1,11 @@
 import { Wrapper, Container, Title, Logo } from './styles'
-
 import logo from '../../assets/logo.png'
+import { useTheme } from '../../hooks/useTheme'
 
 function Header() {
-  const usuarioLogado = true
-  let message
+  const usuarioLogado = true;
+  let message;
+  const { toggleTheme } = useTheme();
 
   if (usuarioLogado) {
     message = <p>Bem-vindo de volta!</p>
@@ -20,6 +21,7 @@ function Header() {
           {message}
         </div>
         <Logo src={logo}/>
+        <button onClick={toggleTheme}>Alternar tema</button>
       </Container>
     </Wrapper>
   )
