@@ -4,25 +4,26 @@ import Post from '../../componentes/Post'
 import { posts } from '../../posts'
 import PostsList from '../../componentes/PostsList'
 import { Search, Container } from './styles'
+import { ChangeEvent, useState } from 'react'
 
 export function Home() {
   const hello = 'Hello, React!'
 
-  let textoDoFiltro = ''
+  const [filterText, setFilterText] =  useState('')
+  const [filteredPosts, setFilteredPosts] = useState(posts)
 
-  function filtrarTexto(evento: React.ChangeEvent<HTMLInputElement>) {
-    textoDoFiltro = evento.target.value.toLowerCase()
-    console.log('Texto do filtro:', textoDoFiltro)
+  function filtrarTexto(event: ChangeEvent<HTMLInputElement>){
+    setFilterText(event.target.value)
   }
 
   function enviarFormulario(evento: React.FormEvent<HTMLFormElement>) {
     evento.preventDefault()
 
-    const postsFiltrados = posts.filter((post) =>
-      post.titulo?.toLowerCase().includes(textoDoFiltro),
+    const filtros = posts.filter((post) =>
+      post.titulo?.toLowerCase().includes(filterText.toLowerCase()),
     )
 
-    console.log('Posts filtrados:', postsFiltrados)
+    setFilteredPosts(filtros)
   }
 
   return (
@@ -46,7 +47,7 @@ export function Home() {
 
         <h2>Receitas:</h2>
 
-        <PostsList posts={posts} />
+        <PostsList posts={filteredPosts} />
       </main>
 
       <Footer />
